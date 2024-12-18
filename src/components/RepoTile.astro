@@ -5,7 +5,7 @@ const { repo, idx } = Astro.props;
 <div class={`project island-light island-stack island ${repo.language} ${repo.classes} ${(idx+1) % 4 == 0 ? 'last-in-row': ''}`}>
     { repo.featured &&
     <div class="island-item featured-image">
-        <img src={`/images/${repo.background}`}>
+        <img src={`images/${repo.background}`}>
     </div>
     }
     <div class="island-item">
