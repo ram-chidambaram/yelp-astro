@@ -1,0 +1,30 @@
+---
+const { repo, idx } = Astro.props;
+
+---
+<div class={`project island-light island-stack island ${repo.language} ${repo.classes} ${(idx+1) % 4 == 0 ? 'last-in-row': ''}`}>
+    { repo.featured &&
+    <div class="island-item featured-image">
+        <img src={`/images/${repo.background}`}>
+    </div>
+    }
+    <div class="island-item">
+        <h3>
+            <a href={repo.url} target="_blank">
+                { repo.logo && 
+                    <img src={`/images/${repo.logo}`} height="21px" width="26px" class="logo"> }
+                {repo.name}
+            </a>
+        </h3>
+        <div class="repo-info">
+            <span><i class="octicon octicon-star"></i> {repo.watchers}</span>
+            <span><i class="octicon octicon-repo-forked"></i> {repo.forks}</span><span class={`language ${repo.language}`}>{repo.language}</span>
+        </div>
+        <p>{repo.description}</p>
+    </div>
+    <div class="island-item bottom-links">
+        {repo.blogPost && 
+        <a href={repo.blogPost} target="_blank"><span class="octicon octicon-file-text"></span> Blog post</a> }
+      </div>
+
+</div>

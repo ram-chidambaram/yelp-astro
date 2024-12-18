@@ -1,0 +1,10 @@
+---
+const { href, label, tabon } = Astro.props;
+
+const currtab = tabon ? 'tabon' : ''
+---
+<li class="header-nav_item">
+    <div class="header-nav_link_container">
+      <a class={`header-nav_link ${currtab}`} href={href}>{label}</a>
+    </div>
+</li>

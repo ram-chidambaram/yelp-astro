@@ -1,0 +1,11 @@
+---
+const { header } = Astro.props;
+---
+<div class="main-footer_item arrange_unit">
+    <div class="footer-menu responsive-hidden-small">
+      <h3 class="footer-menu_header">{header}</h3>
+      <ul class="footer-menu_list">
+        <slot/>
+      </ul>
+    </div>
+</div>
