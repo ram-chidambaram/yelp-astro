@@ -27,7 +27,7 @@ h3 a i {
 }
 
 .top-shelf-grey .content-container {
-  background: url(images/illustration.png) no-repeat right bottom;
+  background: url(../images/illustration.png) no-repeat right bottom;
   height: 240px;
   width: 960px;
 }
