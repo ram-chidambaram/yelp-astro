@@ -12,7 +12,7 @@ const { repo, idx } = Astro.props;
         <h3>
             <a href={repo.url} target="_blank">
                 { repo.logo && 
-                    <img src={`/images/${repo.logo}`} height="21px" width="26px" class="logo"> }
+                    <img src={`images/${repo.logo}`} height="21px" width="26px" class="logo"> }
                 {repo.name}
             </a>
         </h3>
